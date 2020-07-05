@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Myshop.Core.Models
+{
+   public class ProductCategory
+    {
+        public string Id { get; set; }
+        public string Category { get; set; }
+
+        public ProductCategory()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
+        public ProductCategory Find(Func<object, bool> p)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
