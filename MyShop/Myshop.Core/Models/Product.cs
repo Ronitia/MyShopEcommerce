@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Myshop.Core.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public string Id { get; set; }
+        
 
         [StringLength(20)]
         [DisplayName("Product Name")]
@@ -26,10 +26,7 @@ namespace Myshop.Core.Models
         [Range(0, 1000)]
         public Decimal Price { get; set; }
 
-       public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
+   
 
     }
 }
